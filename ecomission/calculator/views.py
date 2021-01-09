@@ -5,6 +5,7 @@ from geopy.geocoders import Nominatim
 from math import cos, asin, sqrt
 import requests
 import json
+import os
 
 # Create your views here.
 
@@ -51,15 +52,16 @@ def get_car_details(request):
         payload = {'type': type, 'distance_unit': distance_unit,
                    'distance_value': distance, 'vehicle_model_id': vehicle_model_id}
         response = requests.get(url, headers=headers, params=payload)
-        
+
         if response.status_code == 200:
             api_response = json.loads(response.text)
             attributes = api_response["data"]["attributes"]
-            carbon_kg = attributes["carbon_kg"]
+            carbon_lb = attributes["carbon_lb"]
             carbon_mt = attributes["carbon_mt"]
-            request.session['carbon_kg'] = carbon_kg
+            request.session['distance'] = distance
+            request.session['carbon_lb'] = carbon_lb
             request.session['social_cost'] = carbon_mt*105
-            return redirect('results')
+            return redirect('get_results')
 
     except:
         messages.add_message(request, messages.ERROR,
@@ -69,7 +71,8 @@ def get_car_details(request):
 
 
 def get_results(request):
-    return render(request, 'results.html', {'carbon_kg': request.session['carbon_kg'],
+    return render(request, 'results.html', {'distance': request.session['distance'],
+                                            'carbon_lb': request.session['carbon_lb'],
                                             'social_cost': request.session['social_cost']})
 
 
