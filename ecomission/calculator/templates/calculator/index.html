@@ -10,17 +10,26 @@
 <body>
     <div class="container">
         <section class="first">
-            <header>
-                <h1>WELCOME TO</h1>
-                <img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo">
-            </header>
-            <p>HOW DO YOU PLAN ON TRAVELLING TODAY?</p>
-            <div class="btns">
-                <button class="btn btn-car">
-                    <img src="..\..\static\calculator\images\car.png"/> 
-                    <img src="..\..\static\calculator\images\plane.png"/> 
-                </button>
+            <div class="col-sm">
+                <div class="row">                
+                    <h1>WELCOME TO</h1>
+                    <p style = "text-align:center"><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo" class = "logoimage"></p>                
+                </div>
+                <div class="row">
+                <p>HOW DO YOU PLAN ON TRAVELLING TODAY?</p>
+                </div>
+                <div class="row">
+                    <a href = "/ecomission/calculator/templates/calculator/car_details.html">
+                        <p style = "text-align:center;">
+                        <img src="..\..\static\calculator\images\car.png" class = "car"/> 
+                        
+                        </a>
+                        <img src="..\..\static\calculator\images\plane.png"/> 
+                        <p>Flight Calculation Coming Soon!</p>
+                    </p>
+                    </button>
 
+                </div>
             </div>
 
         </section>          
@@ -29,19 +38,45 @@
 </html>
 
 <style>
-    body{
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+    body, html{
         background: #96CF63;  
+        font-family: Lato;
+        height: 100%
+    }
+    .car{
+        opacity:1;
+    }
+    .car:hover .overlay {
+        opacity: 0.5;
     }
 
-    .bg {
-        background-image: url("..\..\static\calculator\images\1.png");
+    .logoimage{
+        height: 149.5px;
+        width: 650px;
+    }
+
+    .first {
+        background-image: url("/ecomission/calculator/static/calculator/images/1.png");
+        background-repeat: no-repeat;
+        background-size: 110%;
     }
 
     h1{
         color: white;
+        text-align: center;
+        font-size: 450%;
+        margin: 7rem 0 0;
     }
 
     p{
         color: white;
+        text-align: center;
+        font-size: 250%;
+    }
+
+    img{
+        width: 15%;
     }
 </style>

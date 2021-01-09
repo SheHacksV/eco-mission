@@ -9,21 +9,29 @@
 </head>
 <body>
     <div class="bg">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/ecomission/calculator/templates/calculator/about.html"></span>About</a></li>
+            <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo">
+            </li>
+        </ul>
         <section class="secondcar">
-            <img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo">
+            <div>
+                <h2>ENTER YOUR POSTAL CODE</h2>
+            </div>
             <div class="form-container">
                 <form action="">
                     <div class="form-left">
-                        <label for="from">From:</label>
-                        <input type="text" name="from" >
-                        <label for="to">To:</label>
-                        <input type="text" name="to" >
-                        <input type="button" value="Next" class="btn btn-info">
+                        <p>
+                            <label for="from">From:</label>
+                            <input type="text" name="from" >
+                       <br>
+                            <label for="to">To:</label>
+                            <input type="text" name="to" >
+                        </p>
+                        <p style = "text-align: center;">
+                        <input type="button" value="Submit" class="btn-lg btn-info"></p>
                     </div>
                 </form>
-            </div>
-            <div>
-                <h2>ENTER YOUR POSTAL CODE</h2>
             </div>
         </section>          
     </div>
@@ -32,16 +40,45 @@
 
 
 <style>
+    nav{
+        margin-right: auto;
+        text-align: right;
+                
+    }
+
+    .btn-lg {
+        color: white;
+    }
+    
     body{
-        background: #96CF63
+        background: #96CF63;
+        background-image: url("/ecomission/calculator/static/calculator/images/2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     label {
-        color: white
+        color: white;
+        text-align: center;
+        font-size: 300%;
+        margin: 15rem 0 0 0;
     }
 
     h2{
-        color: white
+        color: white;
+        text-align: center;
+        font-size: 200%;
+        margin-top: 5rem;
+    }
+
+    img{
+        width: 30%;
+        text-align: right;
+
+    }
+
+    p{
+        margin: 0;
     }
 
 </style>
