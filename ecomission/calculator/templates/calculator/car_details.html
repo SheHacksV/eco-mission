@@ -9,11 +9,13 @@
 </head>
 <body>
     <div class="bg">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="/ecomission/calculator/templates/calculator/about.html"></span>About</a></li>
-            <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo">
-            </li>
-        </ul>
+        <div class="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/ecomission/calculator/templates/calculator/about.html"></span>About</a></li>
+                <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo">
+                </li>
+            </ul>
+        </div>
         <section class="secondcar">
             <div>
                 <h2>ENTER YOUR POSTAL CODE</h2>
@@ -40,14 +42,12 @@
 
 
 <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
     nav{
         margin-right: auto;
         text-align: right;
                 
-    }
-
-    .btn-lg {
-        color: white;
     }
     
     body{
@@ -55,6 +55,8 @@
         background-image: url("/ecomission/calculator/static/calculator/images/2.png");
         background-repeat: no-repeat;
         background-size: cover;
+        font-family: Lato;
+
     }
 
     label {
@@ -68,7 +70,11 @@
         color: white;
         text-align: center;
         font-size: 200%;
-        margin-top: 5rem;
+        margin-top: 10rem;
+    }
+
+    .navigation{
+        margin-top: 0rem;
     }
 
     img{

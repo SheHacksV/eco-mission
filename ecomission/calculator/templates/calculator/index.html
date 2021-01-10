@@ -7,9 +7,23 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
-<body>
-    <div class="container">
-        <section class="first">
+<body>        
+    <section class="first"></section>
+            <div class="navigate">
+                <nav class="navbar navbar-default navbar-custom">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                      </div>
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo" class = "logo"></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/ecomission/calculator/templates/calculator/about.html" class = "link">About</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>  
+                <section class="first"></section>
             <div class="col-sm">
                 <div class="row">                
                     <h1>WELCOME TO</h1>
@@ -24,8 +38,8 @@
                         <img src="..\..\static\calculator\images\car.png" class = "car"/> 
                         
                         </a>
-                        <img src="..\..\static\calculator\images\plane.png"/> 
-                        <p>Flight Calculation Coming Soon!</p>
+                        <img src="..\..\static\calculator\images\plane.png" class = "plane"/> 
+                        <h6>Flight Calculation Coming Soon!</h6>
                     </p>
                     </button>
 
@@ -43,31 +57,44 @@
     body, html{
         background: #96CF63;  
         font-family: Lato;
-        height: 100%
+        background-image: url("/ecomission/calculator/static/calculator/images/1.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 4rem;
     }
+
+    .navbar-custom{
+        background-color: #96CF63;
+        padding: 0;
+    }
+
+    .logo{
+        width:250px;
+    }
+
+    .nav.navbar-nav.navbar-left li a {
+    color: white;
+    font-size: 25px;    
+    }
+
     .car{
         opacity:1;
     }
-    .car:hover .overlay {
-        opacity: 0.5;
+    .car:hover {
+        opacity: 0.8;
     }
 
     .logoimage{
-        height: 149.5px;
-        width: 650px;
+        height: 130px;
+        width: 610px;
     }
 
-    .first {
-        background-image: url("/ecomission/calculator/static/calculator/images/1.png");
-        background-repeat: no-repeat;
-        background-size: 110%;
-    }
 
     h1{
         color: white;
         text-align: center;
         font-size: 450%;
-        margin: 7rem 0 0;
+        margin: 3rem 0 0;
     }
 
     p{
@@ -78,5 +105,16 @@
 
     img{
         width: 15%;
+    }
+
+    .plane{
+        opacity:0.5;
+    }
+
+    h6{
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 110%;
     }
 </style>
