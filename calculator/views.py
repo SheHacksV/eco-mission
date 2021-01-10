@@ -36,7 +36,7 @@ def get_car_details(request):
     departure_postcode = route_form.cleaned_data.get('departure_postcode')
     destination_postcode = route_form.cleaned_data.get('destination_postcode')
 
-    geo_locator = Nominatim(user_agent="ecomission")
+    geo_locator = Nominatim(user_agent="ecomissioncopy")
 
     try:
         departure_location = geo_locator.geocode(departure_postcode)
