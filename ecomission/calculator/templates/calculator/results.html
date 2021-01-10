@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>e(co)mission</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
@@ -18,7 +18,7 @@
                     <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo" class = "logo"></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-left">
-                    <li><a href="/ecomission/calculator/templates/calculator/about.html" class = "link">About</a></li>
+                    <li><a href="{% url 'about' %} " class = "link">About</a></li>
                   </ul>
                 </div>
             </nav>
@@ -28,23 +28,22 @@
             <h3>YOUR CO<sub>2</sub> EMISSIONS</h3>
             <div class="info">
                 <!--Need backend input!!! -->
-                <h4>DISTANCE:</h4>
-                <h4>EMISSIONS:</h4>
-                <h4>SOCIAL COST:</h4>
+                <h4>DISTANCE: {{ distance }}</h4>
+                <h4>EMISSIONS: {{ carbon_lb }}</h4>
+                <h4>SOCIAL COST: {{ social_cost }}</h4>
             </div>
 
-            <!--{% if em > 4000 %}-->
+            {% if carbon_lb > 8000 %}
             <h3> Poor </h3>
-            <!--{%else%}-->
-            <!--<h3> Good </h3>-->
+            {% else %}
+            <h3> Good </h3>
+            {% endif %}
 
 
             <div class="progress progress-sm progress center-block" style = "text-align:center;width:50%">
                 <div class="progress-bar progress-bar-striped active" role="progressbar"
                 aria-valuenow="20" aria-valuemin="0" aria-valuemax="70" style="width:50%">
                     40%
-                    
-
                 </div>
             </div>
 
@@ -64,7 +63,7 @@
     }
 
     .bg {
-        background-image: url("/ecomission/calculator/static/calculator/images/3.png");
+        background-image: url("/static/calculator/images/3.png");
         background-repeat: no-repeat;
         background-size: cover;
     }

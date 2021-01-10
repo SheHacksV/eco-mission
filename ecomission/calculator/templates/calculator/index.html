@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>e(co)mission</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
@@ -18,7 +18,7 @@
                         <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo" class = "logo"></li>
                       </ul>
                       <ul class="nav navbar-nav navbar-left">
-                        <li><a href="/ecomission/calculator/templates/calculator/about.html" class = "link">About</a></li>
+                        <li><a href="{% url 'about' %} " class = "link">About</a></li>
                       </ul>
                     </div>
                   </nav>
@@ -33,7 +33,7 @@
                 <p>HOW DO YOU PLAN ON TRAVELLING TODAY?</p>
                 </div>
                 <div class="row">
-                    <a href = "/ecomission/calculator/templates/calculator/car_details.html">
+                    <a href = "{% url 'get_car_details' %}">
                         <p style = "text-align:center;">
                         <img src="..\..\static\calculator\images\car.png" class = "car"/> 
                         
@@ -57,7 +57,7 @@
     body, html{
         background: #96CF63;  
         font-family: Lato;
-        background-image: url("/ecomission/calculator/static/calculator/images/1.png");
+        background-image: url("/static/calculator/images/1.png");
         background-repeat: no-repeat;
         background-size: 100%;
         background-position-y: 4rem;
