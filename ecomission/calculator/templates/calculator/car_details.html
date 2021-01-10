@@ -11,13 +11,20 @@
 
 <body>
 <div class="bg">
-    <div class="navigation">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="{% url 'about' %}"></span>About</a></li>
-            <li><img alt="e(co)mission logo" src="..\..\static\calculator\images\logo.png">
-            </li>
-        </ul>
-    </div>
+    <div class="navigate">
+        <nav class="navbar navbar-default navbar-custom">
+            <div class="container-fluid">
+              <div class="navbar-header">
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo" class = "logo"></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-left">
+                <li><a href="{% url 'about' %} " class = "link">About</a></li>
+              </ul>
+            </div>
+        </nav>
+    </div>  
 
     {% if messages %}
     <ul class="messages">
@@ -64,19 +71,32 @@
 <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
-    nav{
-        margin-right: auto;
-        text-align: right;
-                
+    .navbar-custom{	
+        background-color: #96CF63;	
+        padding: 0;	
+    }
+	
+	
+    .logo{	
+        width:250px;	
+    }
+	
+    .nav.navbar-nav.navbar-left li a {	
+    color: white;
+    font-size: 25px;    
     }
     
     body{
         background: #96CF63;
+/*
         background-image: url("/static/calculator/images/2.png");
+*/
+        background-image: url("../../static/calculator/images/2.png");
+
         background-repeat: no-repeat;
         background-size: cover;
         font-family: Lato;
-
+        overflow-y: hidden;
     }
 
     label {
