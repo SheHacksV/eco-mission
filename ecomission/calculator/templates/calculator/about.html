@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="bg">
+        <section class="first">
+            <div class="navigate">
+            <nav class="navbar navbar-default navbar-custom">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                  </div>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo" class = "logo"></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-left">
+                    <li><a href="/ecomission/calculator/templates/calculator/index.html" class = "link">Calculate</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>  
+            <header>
+                <h1>About</h1>
+                <p style = "text-align:center;"><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo" class = "logoimage"></p>                
+            </header>
+            <br>
+            <h4>Introduction</h4>
+            <p>E(co2)mission helps you calculate and better understand the amount of greenhouse gas emitted during your trip, as well as the differences among various modes of transportation and the social cost of these emissions.</p>
+            <p><a href="https://www.epa.gov/sites/production/files/2016-12/documents/social_cost_of_carbon_fact_sheet.pdf" class = "link2">Environment Protection Agency </a>
+                describes the social cost of emissions as an "estimate of climate change damages and includes,
+                among other things, changes in net agricultural productivity, human health, property damages
+                from increased flood risk and changes in energy system costs, such as reduced costs for heating
+                and increased costs for air conditioning." You will see the total emissions in pounds of carbon dioxide equivalent (CO2-e), as well as an estimate of the costs that these emissions impose on society. Therefore, this tool will help empower you to reduce their carbon footprint while raising awareness for more environmentally-friendly routes and modes of tranportation.</p>
+                <br>
+                <h4>Methodology Used to Calculate Carbon Emissions</h4>
+                <p>Data from             <a href="https://www.carbonfootprint.com/calculator.aspx" class = "link2">Carbon Footprint Ltd's Carbon Footprint Calculator For Individuals And Households</a>
+                    was used to calculate per-mile emissions for each mode of transportation. These per-mile emissions were then multipled by the distance travelled (miles) to produce the total amount of greenhouse gas emitted during the trip.</p>
+                <p>According to the             <a href="https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator" class = "link2">Nature Conservancy</a>
+                    , the global average carbon footprint for a person is 4 tons. You will be able to see how you compare 
+                    to this global with a visual status bar, allowing you to better understand your current carbon footprint. Research shows that, to best avoid a 2℃ rise in global temperatures, the global average carbon footprint per year must drop under 2 tons by 2050. Drastically reducing your carbon footprint doesn't happen overnight! Using this tool will bring you one step closer to reducing your carbon footprint. By continuing to make small changes to your daily trips, you can start making a big difference!</p>
+        <br>
+        <br>
+                </section>          
+    </div>
+</body>
+</html>
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+    body{
+        background: #96CF63;
+        font-family: Lato;
+
+    }
+    .navbar-custom{
+        background-color: #96CF63;
+    }
+
+    .logo{
+        width:250px;
+    }
+
+    .nav.navbar-nav.navbar-left li a {
+    color: white;
+    font-size: 25px;
+    }
+    
+
+    h1{
+        color: white;
+        text-align: center;
+        font-size: 370%;
+    }
+
+    p{
+        color: white;
+        text-align: justify;
+        font-size: 110%;
+        margin-top: 2em;
+        margin-left: 6em;
+        margin-right: 6em;
+
+    }
+
+    h4{
+        color:white;
+        text-align: justify;
+        font-size: 140%;
+        margin-left: 3em;
+    }
+
+    .link2{
+        color: green
+    }
+</style>

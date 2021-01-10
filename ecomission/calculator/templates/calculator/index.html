@@ -4,12 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
-<body>
-    <section class="first">
-        <header>
-            <h1>eco-mission</h1>
-        </header>
-    </section>
+<body>        
+    <section class="first"></section>
+            <div class="navigate">
+                <nav class="navbar navbar-default navbar-custom">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                      </div>
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo" class = "logo"></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-left">
+                        <li><a href="/ecomission/calculator/templates/calculator/about.html" class = "link">About</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>  
+                <section class="first"></section>
+            <div class="col-sm">
+                <div class="row">                
+                    <h1>WELCOME TO</h1>
+                    <p style = "text-align:center"><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo" class = "logoimage"></p>                
+                </div>
+                <div class="row">
+                <p>HOW DO YOU PLAN ON TRAVELLING TODAY?</p>
+                </div>
+                <div class="row">
+                    <a href = "/ecomission/calculator/templates/calculator/car_details.html">
+                        <p style = "text-align:center;">
+                        <img src="..\..\static\calculator\images\car.png" class = "car"/> 
+                        
+                        </a>
+                        <img src="..\..\static\calculator\images\plane.png" class = "plane"/> 
+                        <h6>Flight Calculation Coming Soon!</h6>
+                    </p>
+                    </button>
+
+                </div>
+            </div>
+
+        </section>          
+    </div>
 </body>
 </html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+    body, html{
+        background: #96CF63;  
+        font-family: Lato;
+        background-image: url("/ecomission/calculator/static/calculator/images/1.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-y: 4rem;
+    }
+
+    .navbar-custom{
+        background-color: #96CF63;
+        padding: 0;
+    }
+
+    .logo{
+        width:250px;
+    }
+
+    .nav.navbar-nav.navbar-left li a {
+    color: white;
+    font-size: 25px;    
+    }
+
+    .car{
+        opacity:1;
+    }
+    .car:hover {
+        opacity: 0.8;
+    }
+
+    .logoimage{
+        height: 130px;
+        width: 610px;
+    }
+
+
+    h1{
+        color: white;
+        text-align: center;
+        font-size: 450%;
+        margin: 3rem 0 0;
+    }
+
+    p{
+        color: white;
+        text-align: center;
+        font-size: 250%;
+    }
+
+    img{
+        width: 15%;
+    }
+
+    .plane{
+        opacity:0.5;
+    }
+
+    h6{
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 110%;
+    }
+</style>
