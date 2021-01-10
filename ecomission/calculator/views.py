@@ -54,8 +54,7 @@ def get_car_details(request):
     vehicle_model_id = "7268a9b7-17e8-4c8d-acca-57059252afe9"
 
     url = "https://www.carboninterface.com/api/v1/estimates"
-    # key = "Bearer " + os.environ.get(CARBON_API_KEY)
-    key = "Bearer " + "4egbuH6TWH33h2As62X9Lw"
+    key = "Bearer " + os.environ.get(CARBON_API_KEY)
 
     headers = {'Authorization': key, 'Content-Type': 'application/json'}
     payload = {'type': type, 'distance_unit': distance_unit,
