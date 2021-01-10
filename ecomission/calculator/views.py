@@ -68,7 +68,7 @@ def get_car_details(request):
         attributes = api_response[0]["data"]["attributes"]
         carbon_lb = attributes["carbon_lb"]
         carbon_mt = attributes["carbon_mt"]
-        request.session['distance'] = distance
+        request.session['distance'] = int(distance)
         request.session['carbon_lb'] = carbon_lb
         request.session['social_cost'] = carbon_mt * 105
         return redirect('get_results')
