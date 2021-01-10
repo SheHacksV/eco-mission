@@ -1,1 +1,1 @@
-web: gunicorn ecomission.wsgi --log-file -
+web: gunicorn ecomission.ecomission.wsgi --log-file -
