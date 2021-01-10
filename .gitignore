@@ -1,3 +1,8 @@
 ecovenv/
 .idea
 .env
+calculator/__pycache__/
+calculator/migrations/__pycache__/
+ecomission/__pycache__/urls.cpython-38.pyc
+ecomission/__pycache__/wsgi.cpython-38.pyc
+ecomission/__pycache__/settings.cpython-38.pyc

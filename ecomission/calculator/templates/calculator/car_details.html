@@ -2,41 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>e(co)mission</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
+{% load widget_tweaks %}
+
 <body>
-    <div class="bg">
-        <div class="navigation">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/ecomission/calculator/templates/calculator/about.html"></span>About</a></li>
-                <li><img src = "..\..\static\calculator\images\logo.png" alt = "e(co)mission logo">
-                </li>
-            </ul>
-        </div>
-        <section class="secondcar">
-            <div>
-                <h2>ENTER YOUR POSTAL CODE</h2>
-            </div>
-            <div class="form-container">
-                <form action="">
-                    <div class="form-left">
-                        <p>
-                            <label for="from">From:</label>
-                            <input type="text" name="from" >
-                       <br>
-                            <label for="to">To:</label>
-                            <input type="text" name="to" >
-                        </p>
-                        <p style = "text-align: center;">
-                        <input type="button" value="Submit" class="btn-lg btn-info"></p>
-                    </div>
-                </form>
-            </div>
-        </section>          
+<div class="bg">
+    <div class="navigation">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'about' %}"></span>About</a></li>
+            <li><img alt="e(co)mission logo" src="..\..\static\calculator\images\logo.png">
+            </li>
+        </ul>
     </div>
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        {% if message.tags %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <section class="secondcar">
+        <div>
+            <h2>ENTER YOUR POSTAL CODE</h2>
+        </div>
+        <div class="form-container">
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="form-left">
+                    {% for field in route_form.visible_fields %}
+                    {{ field.label_tag }}
+                    {% if not field.errors %}
+                    {% render_field field %}
+                    <br>
+                    {% endif %}
+
+                    {% for error in field.errors %}
+                    <p class="help is-danger">{{ error }}</p>
+                    {% endfor %}
+                    {% endfor %}
+
+                    <p style="text-align: center;">
+                        <button class="btn-lg btn-info">Submit</button></p>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
 </body>
 </html>
 
@@ -52,7 +72,7 @@
     
     body{
         background: #96CF63;
-        background-image: url("/ecomission/calculator/static/calculator/images/2.png");
+        background-image: url("/static/calculator/images/2.png");
         background-repeat: no-repeat;
         background-size: cover;
         font-family: Lato;
@@ -86,5 +106,8 @@
     p{
         margin: 0;
     }
+
+
+
 
 </style>

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'calculator.apps.CalculatorConfig',
     'requests',
     'geopy',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +80,10 @@ WSGI_APPLICATION = 'ecomission.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ecomission',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
